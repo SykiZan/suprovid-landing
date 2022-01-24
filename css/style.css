@@ -43,10 +43,23 @@ body {
   margin: 0;
   padding: 0;
   min-width: 360px;
-  height: 100%;
+  min-height: 100vh;
   line-height: 1.3;
   letter-spacing: 0.2px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: relative; }
 
 a {
   display: inline-block;
@@ -422,7 +435,8 @@ template {
     background-position: top center;
     letter-spacing: 0;
     max-width: 300px;
-    font-size: 20px; }
+    font-size: 20px;
+    margin: 0 auto 10px; }
   .adv__list li:nth-of-type(1) h3 {
     background-image: url("../img/stopwatch.svg"); }
   .adv__list li:nth-of-type(2) h3 {
@@ -498,7 +512,10 @@ template {
   padding: 60px 0;
   color: #fff;
   position: relative;
-  margin-top: 204px; }
+  margin-top: 204px;
+  font-size: 18px; }
+  .callback .form-control {
+    font-size: 16px; }
   .callback h3 {
     color: #fff;
     font-size: 36px; }
@@ -527,14 +544,17 @@ template {
     top: 2px;
     right: 13px;
     border-radius: 25px;
-    padding: 4px 20px 3px; }
+    padding: 4px 20px 3px;
+    font-size: 20px; }
+
+.to-top {
+  width: 44px; }
 
 #to-top {
   width: 44px;
   height: 44px;
   position: fixed;
-  bottom: 30px;
-  right: 5%;
+  bottom: 18px;
   border-radius: 8px;
   background: #147AA9 url("../img/up.svg") no-repeat center/16px 20px;
   display: none;
@@ -545,8 +565,8 @@ template {
 
 @media (max-width: 1400px) {
   .slider {
-    background-size: 425px auto;
-    background-position: top right -30px; } }
+    background-size: 50% auto;
+    background-position: top right -7%; } }
 
 @media (max-width: 992px) {
   .header .container {
@@ -629,10 +649,14 @@ template {
     font-size: 19px !important; }
   .adv__list > li:not(:last-of-type) {
     margin-bottom: 10px; }
+  .slider {
+    background-size: 425px auto;
+    background-position: top right -30px; }
   .tasks .row {
     margin-bottom: 30px; }
   .callback {
-    padding: 52px 0; }
+    padding: 52px 0;
+    font-size: 16px; }
   .callback h3 {
     font-size: 36px; }
   .callback::after {
@@ -652,7 +676,6 @@ template {
     margin-bottom: 39px; }
   .carousel-text h3 {
     margin-bottom: 18px;
-    max-width: 320px;
     line-height: 1.4; }
   .carousel-text {
     line-height: 1.4; }
